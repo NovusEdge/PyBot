@@ -18,7 +18,15 @@
       },
       {
         "name": "To Run code:",
-        "value": "```txt\nReact to the code block with:```\n :zap:"
+        "value": "```txt\nReact to the code block with:```\n :zap:\n :point_up:Still under work..."
+      },
+      {
+        "name": ">cats/CATS",
+        "value": "```Displays a cute picture/gif of a cat.\nPS: Sorry dog people.```"
+      },
+      {
+        "name": ">quote",
+        "value": "```Displays a random quote.```"
       }
     ]
   }
