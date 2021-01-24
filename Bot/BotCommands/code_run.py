@@ -1,5 +1,6 @@
 import discord, json
-import code, os, sys, StringIO
+import code, os, sys, timeit
+from io import StringIO
 
 def getCode():
     with open("BotCommands/buffer/code_run_inpcode", "w") as codeFile:
@@ -20,9 +21,15 @@ def makeEmbed(output):
           "icon_url": "https://raw.githubusercontent.com/NovusEdge/PyBot/master/logo(pexels-pixabay-247676).ico"
           },
         "fields": [
-            "Output": f"```txt\n{ output[0] }\n```",
-            "Error": f"```txt\n{ output[1] }\n```",
-            ]
+                {
+                "name": "Output(stdout)",
+                "value": f"```txt\n{ output[0] }\n```"
+                },
+                {
+                "name": "Error(stderr):",
+                "value": f"```txt\n{ output[1] }\n```"
+                }
+        ]
     }
     json.dump(embDict, bufFile)
     bufFile.close()
@@ -34,13 +41,17 @@ async def processCode(codeText):
     sys.stdout = codeOut
     sys.stderr = codeErr
 
-    await exec codeText
+    t = timeit.timeit(f"exec({codeText})")
+    if t < 25:
+        await exec(codeText)
+        err = codeErr.getvalue()
+        out = codeOut.getvalue()
+    else:
+        err = "Kill signal (SIGKILL)"
+        out = "Error -_-"
 
     sys.stdout = sys.__stdout__
     sys.stderr = sys.__stderr__
-
-    err = codeErr.getvalue()
-    out = codeOut.getvalue()
 
     codeOut.close()
     codeErr.close()
@@ -52,7 +63,7 @@ async def processCode(codeText):
 async def _runcode(ctx, message):
     codeFile = open("BotCommands/buffer/code_run_inpcode", "r")
 
-    await output = processCode(getCode(message))
+    output = processCode(getCode(message))
     makeEmbed(output)
 
     with open("BotCommands/buffer/code_run_embed.json", "r") as bufFile:
