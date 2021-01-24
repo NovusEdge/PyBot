@@ -1,8 +1,10 @@
 import discord, json, os, base64, pathlib
 from discord.ext import commands
 from BotCommands import bot_help, code_run
+from BotCogs import *
 
 path = pathlib.Path(__file__).parent.absolute()
+print(path)
 os.chdir(path)
 
 botObj =  commands.Bot(command_prefix=">", help_command=None)
@@ -15,9 +17,10 @@ async def on_ready():
 async def help(ctx):
 	await bot_help.help(ctx)
 
-@botObj.command(aliases=["rc", "run"])
-async def runcode(ctx):
-	await code_run.runcode(ctx)
+@botObj.event
+async def runcode(ctx, message):
+	await code_run.runcode(ctx, message)
+# https://discordpy.readthedocs.io/en/latest/api.html#discord.Message.add_reaction
 
 def run(bot, token):
     bot.run(token)
