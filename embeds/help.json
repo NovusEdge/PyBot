@@ -1,0 +1,25 @@
+{
+  "content": "`PyBot's Help Menu`",
+  "embed": {
+    "title": "Commands:",
+    "description": "PyBot can run code, play games and much more\nHere's some commands to get started.",
+    "color": 8106060,
+    "footer": {
+      "text": "by PyBot"
+    },
+    "author": {
+      "name": "PyBot",
+      "icon_url": "https://raw.githubusercontent.com/NovusEdge/PyBot/master/logo(pexels-pixabay-247676).ico"
+    },
+    "fields": [
+      {
+        "name": ">help/h",
+        "value": "```txt\nDisplays this menu 😛\n```"
+      },
+      {
+        "name": ">runcode/rc/run",
+        "value": "```txt\nruns (python)code in the message.```"
+      }
+    ]
+  }
+}
