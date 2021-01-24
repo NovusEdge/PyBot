@@ -17,8 +17,8 @@
         "value": "```txt\nDisplays this menu 😛\n```"
       },
       {
-        "name": ">runcode/rc/run",
-        "value": "```txt\nruns (python)code in the message.```"
+        "name": "To Run code:",
+        "value": "```txt\nReact to the code block with:```\n :zap:"
       }
     ]
   }
