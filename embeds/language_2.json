@@ -1,0 +1,63 @@
+{
+  "embed": {
+    "color": 42751,
+    "thumbnail": {
+      "url": "https://raw.githubusercontent.com/NovusEdge/PyBot/master/logo(pexels-pixabay-247676).ico"
+    },
+    "author": {
+      "name": "PyBot",
+      "icon_url": "https://raw.githubusercontent.com/NovusEdge/PyBot/master/logo(pexels-pixabay-247676).ico"
+    },
+    "fields": [
+    {
+      "name": "`mercury`",
+      "value": "`Prefixes: mercury, mry`"
+    },
+    {
+      "name": "`nim`",
+      "value": "`Prefixes: nim`"
+    },
+    {
+      "name": "`ocaml`",
+      "value": "`Prefixes: ocaml, cma`"
+    },
+    {
+      "name": "`perl`",
+      "value": "`Prefixes: perl, pl`"
+    },
+    {
+      "name": "`php`",
+      "value": "`Prefixes: php`"
+    },
+    {
+      "name": "`python`",
+      "value": "`Prefixes: python, py`"
+    },
+    {
+      "name": "`raku`",
+      "value": "`Prefixes: raku`"
+    },
+    {
+      "name": "`ruby`",
+      "value": "`Prefixes: ruby`"
+    },
+    {
+      "name": "`rust`",
+      "value": "`Prefixes: rust, rs`"
+    },
+    {
+      "name": "`scala`",
+      "value": "`Prefixes: scala, scl`"
+    },
+    {
+      "name": "`swift`",
+      "value": "`Prefixes: swift`"
+    },
+    {
+      "name": "`typescript`",
+      "value": "`Prefixes: typescript, ts`"
+    }
+  ]
+
+  }
+}
