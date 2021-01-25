@@ -1,0 +1,182 @@
+[
+  {
+    "name": "assembly",
+    "url": "https://run.glot.io/languages/assembly",
+    "prefix": [ "asm", "S", "s" ]
+  },
+  {
+    "name": "ats",
+    "url": "https://run.glot.io/languages/ats",
+    "prefix": [ "ats" ]
+  },
+  {
+    "name": "bash",
+    "url": "https://run.glot.io/languages/bash",
+    "prefix": [ "sh", "bash" ]
+  },
+  {
+    "name": "c",
+    "url": "https://run.glot.io/languages/c",
+    "prefix": [ "c", "clang" ]
+  },
+  {
+    "name": "clojure",
+    "url": "https://run.glot.io/languages/clojure",
+    "prefix": [ "clojure" ]
+  },
+  {
+    "name": "cobol",
+    "url": "https://run.glot.io/languages/cobol",
+    "prefix": [ "cobol", "cob", "cbl" ]
+  },
+  {
+    "name": "coffeescript",
+    "url": "https://run.glot.io/languages/coffeescript",
+    "prefix": [ "coffee", "litcoffee", "coffeescript"]
+  },
+  {
+    "name": "cpp",
+    "url": "https://run.glot.io/languages/cpp",
+    "prefix": [ "c++", "cpp", "cpplang" ]
+  },
+  {
+    "name": "crystal",
+    "url": "https://run.glot.io/languages/crystal",
+    "prefix": [ "crystal", "cr" ]
+  },
+  {
+    "name": "csharp",
+    "url": "https://run.glot.io/languages/csharp",
+    "prefix": [ "cs", "csharp" ]
+  },
+  {
+    "name": "d",
+    "url": "https://run.glot.io/languages/d",
+    "prefix": [ "d", "dlang" ]
+  },
+  {
+    "name": "elixir",
+    "url": "https://run.glot.io/languages/elixir",
+    "prefix": [ "elixir", "exs", "ex" ]
+  },
+  {
+    "name": "elm",
+    "url": "https://run.glot.io/languages/elm",
+    "prefix": [ "elm" ]
+  },
+  {
+    "name": "erlang",
+    "url": "https://run.glot.io/languages/erlang",
+    "prefix": [ "erlang", "erl" ]
+  },
+  {
+    "name": "fsharp",
+    "url": "https://run.glot.io/languages/fsharp",
+    "prefix": [ "fsharp", "fs" ]
+  },
+  {
+    "name": "go",
+    "url": "https://run.glot.io/languages/go",
+    "prefix": [ "go", "golang" ]
+  },
+  {
+    "name": "groovy",
+    "url": "https://run.glot.io/languages/groovy",
+    "prefix": [ "groovy", "gvy" ]
+  },
+  {
+    "name": "haskell",
+    "url": "https://run.glot.io/languages/haskell",
+    "prefix": [ "haskell", "hs" ]
+  },
+  {
+    "name": "idris",
+    "url": "https://run.glot.io/languages/idris",
+    "prefix": [ "idr", "idris" ]
+  },
+  {
+    "name": "java",
+    "url": "https://run.glot.io/languages/java",
+    "prefix": [ "java", "jar" ]
+  },
+  {
+    "name": "javascript",
+    "url": "https://run.glot.io/languages/javascript",
+    "prefix": [ "javascript", "js" ]
+  },
+  {
+    "name": "julia",
+    "url": "https://run.glot.io/languages/julia",
+    "prefix": [ "julia", "jl" ]
+  },
+  {
+    "name": "kotlin",
+    "url": "https://run.glot.io/languages/kotlin",
+    "prefix": [ "kotlin", "kt" ]
+  },
+  {
+    "name": "lua",
+    "url": "https://run.glot.io/languages/lua",
+    "prefix": [ "lua" ]
+  },
+  {
+    "name": "mercury",
+    "url": "https://run.glot.io/languages/mercury",
+    "prefix": [ "mercury", "mry" ]
+  },
+  {
+    "name": "nim",
+    "url": "https://run.glot.io/languages/nim",
+    "prefix": [ "nim" ]
+  },
+  {
+    "name": "ocaml",
+    "url": "https://run.glot.io/languages/ocaml",
+    "prefix": [ "ocaml", "cma" ]
+  },
+  {
+    "name": "perl",
+    "url": "https://run.glot.io/languages/perl",
+    "prefix": [ "perl", "pl" ]
+  },
+  {
+    "name": "php",
+    "url": "https://run.glot.io/languages/php",
+    "prefix": [ "php" ]
+  },
+  {
+    "name": "python",
+    "url": "https://run.glot.io/languages/python",
+    "prefix": [ "python", "py" ]
+  },
+  {
+    "name": "raku",
+    "url": "https://run.glot.io/languages/raku",
+    "prefix": [ "raku" ]
+  },
+  {
+    "name": "ruby",
+    "url": "https://run.glot.io/languages/ruby",
+    "prefix": [ "ruby" ]
+  },
+  {
+    "name": "rust",
+    "url": "https://run.glot.io/languages/rust",
+    "prefix": [ "rust", "rs" ]
+  },
+  {
+    "name": "scala",
+    "url": "https://run.glot.io/languages/scala",
+    "prefix": [ "scala", "scl" ]
+  },
+  {
+    "name": "swift",
+    "url": "https://run.glot.io/languages/swift",
+    "prefix": [ "swift" ]
+  },
+  {
+    "name": "typescript",
+    "url": "https://run.glot.io/languages/typescript",
+    "prefix": [ "typescript", "ts" ]
+  }
+]

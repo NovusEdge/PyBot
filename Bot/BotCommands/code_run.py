@@ -1,80 +1,93 @@
-import discord, json
+import discord, json, base64, requests
 import code, os, sys, timeit
-from io import StringIO
-
-def getCode():
-    with open("BotCommands/buffer/code_run_inpcode", "w") as codeFile:
-        codeText = codeFile.read()
-    return codeText
 
 
 def makeEmbed(output):
-    bufFile = open("BotCommands/buffer/code_run_embed.json", "w+")
+    bufFile = open("../embeds/code_run_embed.json", "w+")
     embDict = {
         "title": "Execution Complete",
         "color": 55807,
         "footer": {
-          "text": "by PyBot"
+            "text": "by PyBot"
           },
         "author": {
-          "name": "PyBot",
-          "icon_url": "https://raw.githubusercontent.com/NovusEdge/PyBot/master/logo(pexels-pixabay-247676).ico"
+            "name": "PyBot",
+            "icon_url": "https://raw.githubusercontent.com/NovusEdge/PyBot/master/logo(pexels-pixabay-247676).ico"
           },
         "fields": [
                 {
-                "name": "Output(stdout)",
-                "value": f"```txt\n{ output[0] }\n```"
+                    "name": "Output(stdout)",
+                    "value": f"```txt\n{ output['stdout'] }\n```"
                 },
                 {
-                "name": "Error(stderr):",
-                "value": f"```txt\n{ output[1] }\n```"
+                    "name": "Error(stderr):",
+                    "value": f"```txt\n{ output['stderr'] }\n```"
+                },
+                {
+                    "name": "Error:",
+                    "value": f"```txt\n{ output['error'] }\n```"
                 }
         ]
     }
+    print(embDict)
     json.dump(embDict, bufFile)
     bufFile.close()
 
+def make_req(extn):
+    code_file = open("BotCommands/buffer/code_run_inpcode", "r")
+    resp_file = open("BotCommands/buffer/code_response.json", "w")
+    langs = open("BotCommands/buffer/langs.json", "r")
+    file_name = "main." + extn
+    content = code_file.read()
+    url, name = None, None
 
-async def processCode(codeText):
-    codeOut = StringIO.StringIO()
-    codeErr = StringIO.StringIO()
-    sys.stdout = codeOut
-    sys.stderr = codeErr
+    for lang in json.load(langs):
+        if extn in lang["prefix"]:
+            name = lang["name"]
+            url = lang["url"]
+            break
+    with open("BotCommands/code_config", "r") as f:
+	    TOKEN = base64.b64decode(bytes(f.read().strip(), "utf-8")).decode('utf-8')
 
-    t = timeit.timeit(f"exec({codeText})")
-    if t < 25:
-        await exec(codeText)
-        err = codeErr.getvalue()
-        out = codeOut.getvalue()
-    else:
-        err = "Kill signal (SIGKILL)"
-        out = "Error -_-"
+    headers = {
+        "Authorization": f"Token {TOKEN}",
+        'Content-type': 'application/json'
+    }
 
-    sys.stdout = sys.__stdout__
-    sys.stderr = sys.__stderr__
+    payload = {
+        "data": {
+            "files": [{"name": file_name, "content": f"{content}"}]
+        }
+    }
 
-    codeOut.close()
-    codeErr.close()
+    if url:
+        r = requests.post(url, headers=headers, data=json.dumps(payload), verify=False)
+        print(r.json())
+        json.dump(r.json(), resp_file)
 
-    return out, err
+    code_file.close()
+    resp_file.close()
+    langs.close()
 
-# TODO: get the code with emoji/rxn and put in the buffer file
+async def processCode(extn):
+    make_req(extn)
 
-async def _runcode(ctx, message):
-    codeFile = open("BotCommands/buffer/code_run_inpcode", "r")
+    with open( "BotCommands/buffer/code_response.json", "r" ) as f:
+        output = json.load(f)
 
-    output = processCode(getCode(message))
-    makeEmbed(output)
+    await makeEmbed(output)
 
-    with open("BotCommands/buffer/code_run_embed.json", "r") as bufFile:
-        embedObj = discord.Embed.from_dict( json.load(bufFile) )
+async def sendEmbed(reaction):
+    with open("../embeds/code_run_embed.json", "r") as f:
+        embedObj = discord.Embed.from_dict(json.load(f))
+        await reaction.message.channel.send(embed=embedObj)
 
-    codeFile.close()
-    await ctx.send(embed=embedObj)
-
-
-async def runcode(ctx, message):
-    message.clear_reaction(":zap:")
-    message.add_reaction(":Loading:")
-    _runcode(ctx, message)
-    message.clear_reaction(":Loading:")
+async def runcode(reaction, user):
+    msg = reaction.message
+    with open("BotCommands/buffer/code_run_inpcode", "w+") as f:
+        temp = msg.content.partition("\n")
+        code = temp[2][:-3]
+        extn = temp[0][3:]
+        f.write(code)
+    await processCode(extn)
+    await sendEmbed(reaction)
