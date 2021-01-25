@@ -16,7 +16,7 @@
     },
     "fields": [
       {
-        "name": "`>help/h`",
+        "name": "`pb.help/h`",
         "value": "```txt\nDisplays this menu 😛\n```"
       },
       {
@@ -24,15 +24,15 @@
         "value": "```txt\nReact to the code block with:```\n :zap:\n :point_up:Still under work..."
       },
       {
-          "name": "`>languages/langs/lang`",
+          "name": "`pb.languages/langs/lang`",
           "value": "```Displays the languages that can be run by the bot.```"
       },
       {
-        "name": "`>cats/cat/CATS`",
+        "name": "`pb.cats/cat/CATS`",
         "value": "```Displays a cute picture/gif of a cat.\nPS: Sorry dog people.```"
       },
       {
-        "name": "`>quote`",
+        "name": "`pb.quote`",
         "value": "```Displays a random quote.```"
       }
     ]

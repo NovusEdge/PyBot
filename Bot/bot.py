@@ -6,7 +6,7 @@ from BotCogs import codeCog
 path = pathlib.Path(__file__).parent.absolute()
 os.chdir(path)
 
-botObj =  commands.Bot(command_prefix=">", help_command=None)
+botObj =  commands.Bot(command_prefix="pb.", help_command=None)
 
 @botObj.command(aliases=["h"])
 async def help(ctx):
