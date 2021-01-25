@@ -1,0 +1,117 @@
+{
+  "embed": {
+    "title": "Languages",
+    "description": "Here's a list of languages PyBot can run the code for.",
+    "color": 42751,
+    "footer": {
+      "text": "With the help of the Glot-Run API"
+    },
+    "thumbnail": {
+      "url": "https://raw.githubusercontent.com/NovusEdge/PyBot/master/logo(pexels-pixabay-247676).ico"
+    },
+    "author": {
+      "name": "PyBot",
+      "icon_url": "https://raw.githubusercontent.com/NovusEdge/PyBot/master/logo(pexels-pixabay-247676).ico"
+    },
+    "fields": [
+
+  {
+    "name": "`assembly`",
+    "value":"`Prefixes: asm, s, S`"
+  },
+  {
+    "name": "`ats`",
+    "value": "`Prefixes: ats`"
+  },
+  {
+    "name": "`bash`",
+    "value": "`Prefixes: sh, bash`"
+  },
+  {
+    "name": "`c`",
+    "value": "`Prefixes: c, clang`"
+  },
+  {
+    "name": "`clojure`",
+    "value": "`Prefixes: clojure`"
+  },
+  {
+    "name": "`cobol`",
+    "value": "`Prefixes: cobol, cbl, cob`"
+  },
+  {
+    "name": "`coffeescript`",
+    "value": "`Prefixes: coffee, litcoffee, coffeescript`"
+  },
+  {
+    "name": "`cpp`",
+    "value": "`Prefixes: c++, cpp, cpplang`"
+  },
+  {
+    "name": "`crystal`",
+    "value": "`Prefixes: cr, crystal`"
+  },
+  {
+    "name": "`csharp`",
+    "value": "`Prefixes: cs, csharp`"
+  },
+  {
+    "name": "`d`",
+    "value": "`Prefixes: d`"
+  },
+  {
+    "name": "`elixir`",
+    "value": "`Prefixes: elixir, exs, ex`"
+  },
+  {
+    "name": "`elm`",
+    "value": "`Prefixes: elm,`"
+  },
+  {
+    "name": "`erlang`",
+    "value": "`Prefixes: erlang, erl`"
+  },
+  {
+    "name": "`fsharp`",
+    "value": "`Prefixes: fsharp, fs`"
+  },
+  {
+    "name": "`go`",
+    "value": "`Prefixes: go, golang`"
+  },
+  {
+    "name": "`groovy`",
+    "value": "`Prefixes: groovy, gvy`"
+  },
+  {
+    "name": "`haskell`",
+    "value": "`Prefixes: haskell, hs`"
+  },
+  {
+    "name": "`idris`",
+    "value": "`Prefixes: idris, idr`"
+  },
+  {
+    "name": "`java`",
+    "value": "`Prefixes: java, jar`"
+  },
+  {
+    "name": "`javascript`",
+    "value": "`Prefixes: javascript, js`"
+  },
+  {
+    "name": "`julia`",
+    "value": "`Prefixes: julia, jl`"
+  },
+  {
+    "name": "`kotlin`",
+    "value": "`Prefixes: kotlin, kt`"
+  },
+  {
+    "name": "`lua`",
+    "value": "`Prefixes: lua`"
+  }
+]
+
+  }
+}

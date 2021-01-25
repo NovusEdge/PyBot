@@ -3,9 +3,12 @@
   "embed": {
     "title": "Commands:",
     "description": "PyBot can run code, play games and much more\nHere's some commands to get started.",
-    "color": 8106060,
+    "color": 51711,
     "footer": {
       "text": "by PyBot"
+    },
+    "thumbnail": {
+      "url": "https://raw.githubusercontent.com/NovusEdge/PyBot/master/logo(pexels-pixabay-247676).ico"
     },
     "author": {
       "name": "PyBot",
@@ -13,19 +16,23 @@
     },
     "fields": [
       {
-        "name": ">help/h",
+        "name": "`>help/h`",
         "value": "```txt\nDisplays this menu 😛\n```"
       },
       {
-        "name": "To Run code:",
+        "name": "`To Run code:`",
         "value": "```txt\nReact to the code block with:```\n :zap:\n :point_up:Still under work..."
       },
       {
-        "name": ">cats/CATS",
+          "name": "`>languages/langs/lang`",
+          "value": "```Displays the languages that can be run by the bot.```"
+      },
+      {
+        "name": "`>cats/cat/CATS`",
         "value": "```Displays a cute picture/gif of a cat.\nPS: Sorry dog people.```"
       },
       {
-        "name": ">quote",
+        "name": "`>quote`",
         "value": "```Displays a random quote.```"
       }
     ]

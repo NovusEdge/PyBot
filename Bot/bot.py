@@ -1,6 +1,6 @@
 import discord, json, os, base64, pathlib, asyncio
 from discord.ext import commands
-from BotCommands import bot_help, code_run, get_quote, get_cat
+from BotCommands import bot_help, code_run, get_quote, get_cat, language
 from BotCogs import *
 
 path = pathlib.Path(__file__).parent.absolute()
@@ -20,10 +20,13 @@ async def help(ctx):
 async def quote(ctx):
 	await get_quote.quote(ctx)
 
-@botObj.command(aliases=["CATS"])
+@botObj.command(aliases=["CATS", "cat"])
 async def cats(ctx):
 	await get_cat.cats(ctx)
 
+@botObj.command(aliases=["langs", "lang"])
+async def languages(ctx):
+	await language.languages(ctx)
 
 def run(bot, token):
     bot.run(token)
