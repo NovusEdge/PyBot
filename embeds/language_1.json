@@ -57,7 +57,7 @@
   },
   {
     "name": "`d`",
-    "value": "`Prefixes: d`"
+    "value": "`Prefixes: d, dlang`"
   },
   {
     "name": "`elixir`",
@@ -65,7 +65,7 @@
   },
   {
     "name": "`elm`",
-    "value": "`Prefixes: elm,`"
+    "value": "`Prefixes: elm`"
   },
   {
     "name": "`erlang`",
